@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ngrx-session';
+  courseName = 'NgRx';
+  courseIcon = '/assets/favicon.png';
+  constructor() { }
 }
