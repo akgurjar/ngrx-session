@@ -1,0 +1,31 @@
+
+@mixin core-theme($theme) {
+    $primary: map-get($map: $theme, $key: primary);
+    $accent: map-get($map: $theme, $key: accent);
+    $warn: map-get($map: $theme, $key: warn);
+    $primary-color: mat-color($primary);
+    $accent-color: mat-color($accent);
+    $warn-color: mat-color($warn);
+    .text--primary {
+        color: $primary-color;
+    }
+    .text--accent {
+        color: $accent-color;
+    }
+    .text--warn {
+        color: $warn-color;
+    }
+    .fill--primary {
+        background-color: $primary-color;
+        fill: $primary-color;
+    }
+    .fill--accent {
+        background-color: $accent-color;
+        fill: $accent-color;
+    }
+    .fill--warn {
+        background-color: $warn-color;
+        fill: $warn-color;
+    }
+}
+

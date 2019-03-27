@@ -1,0 +1,113 @@
+:host {
+    height: 100%;
+    user-select: none;
+}
+.diagram__container,
+.diagram__links {
+    height: 360px;
+    width: 800px;
+    // background-color: #F1F1F1;
+    position: relative;
+}
+.diagram__links {
+    path {
+        fill: none;
+        stroke: #f1c40f;
+        stroke-width: 2px;
+    }
+}
+.diagram__ui {
+    --padding: 5px;
+    height: 70px;
+    width: 100px;
+    border-radius: 5px;
+    position: absolute;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding);
+    background-color: #F1F1F1;
+    cursor: pointer;
+}
+.ui__element {
+    background-color: rgba(#000, .07);
+}
+.ui__header {
+    height: 16px;
+}
+.ui__body {
+    padding-top: var(--padding);
+    flex: 1;
+    display: flex;
+}
+.ui__sidebar {
+    width: 24px;
+}
+.ui__content {
+    padding-left: var(--padding);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    div {
+        flex: 1;
+        &:not(:first-child) {
+            margin-top: var(--padding);
+        }
+    }
+}
+.diagram__flow {
+    --height: 80px;
+    position: absolute;
+    top: 0px;
+    left: 240px;
+    right: 10px;
+    top: 50%;
+    height: var(--height);
+    transform: translateY(-50%);
+    // background-color: rgba(#000, .07);
+    display: flex;
+    justify-content: space-between;
+}
+.diagram__actions,
+.diagram__store,
+.diagram__reducer {
+    height: 100%;
+    color: #FFF;
+    position: relative;
+    mat-icon {
+        --size: 32px;
+        height: var(--size);
+        width: var(--size);
+        font-size: var(--size);
+    }
+}
+.diagram__actions {
+    width: var(--height);
+    border-radius: 0 calc(var(--height) / 2) calc(var(--height) / 2) 0;
+}
+.diagram__store {
+    width: calc(var(--height) + 12px);
+    background-color: #2ecc71;
+}
+.diagram__reducer {
+    width: var(--height);
+    border-radius: calc(var(--height) / 2);
+}
+.diagram__label {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform-origin: center center;
+    transform: translate(-50%, 50%);
+    color: #444;
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 18px;
+    color: #666;
+}
+.diagram__label--top {
+    top: -30%;
+}
+.diagram__label--bottom {
+    bottom: -30%;
+}

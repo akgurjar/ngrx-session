@@ -4,6 +4,8 @@
 @import '~@angular/material/theming';
 // Plus imports for other components in your app.
 
+@import 'core.theme';
+
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
@@ -26,4 +28,5 @@ $ngrx-session-theme: mat-light-theme($ngrx-session-primary, $ngrx-session-accent
 // that you are using.
 @include angular-material-theme($ngrx-session-theme);
 
+@include core-theme($ngrx-session-theme);
 /* You can add global styles to this file, and also import other style files */

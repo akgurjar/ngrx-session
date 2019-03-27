@@ -1,0 +1,19 @@
+:host {
+    --size: 36px;
+    display: block;
+    margin-left: var(--size);
+    font-size: 14px;
+}
+.list-item__label {
+    font-size: 16px;
+    display: block;
+    height: var(--size);
+    line-height: var(--size);
+    position: relative;
+    mat-icon {
+        position: absolute;
+        top: calc(calc( var(--size) - 24px) / 2);
+        left: calc(0px - var(--size));
+        transform: translateX(calc(calc( var(--size) - 24px) / 2));
+    }
+}

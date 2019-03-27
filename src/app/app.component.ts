@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  courseName = 'NgRx';
+  courseName = 'State Management';
   courseIcon = '/assets/favicon.png';
   constructor() { }
 }

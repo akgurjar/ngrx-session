@@ -1,0 +1,42 @@
+
+<div class="diagram__container">
+    <svg class="diagram__links" viewBox="0 0 800 360" style="position: relative;">
+        <path d="M120,60 h30 a40,40 0 0 1 40,40 v40 a40,40 0 0 0 40,40 h10" id="uiAction1"/>
+        <path d="M120,300 h30 a40,40 0 0 0 40,-40 v-40 a40,40 0 0 1 40,-40 h10" id="uiAction2"/>
+        <path d="M320,180 h150" id="dispatchAction"/>
+        <path d="M560,170 h164 a28,28 0 1 1 0,20 h-164" id="reduceState" />
+        <path d="M515,140 v-60 a40,40 0 0 0 -40,-40 h-355" id="changeUi1"/>
+        <path d="M515,220 v60 a40,40 0 0 1 -40,40 h-355" id="changeUi2"/>
+        <polygon points="0,-3 0,3 4,0" fill="#34495e">
+            <animateMotion dur="3s">
+                <mpath href="uiAction1"/>
+            </animateMotion>
+        </polygon>
+    </svg>
+    <div class="diagram__ui mat-elevation-z1" matRipple [ngStyle]="uiPositionStyle(item)" *ngFor="let item of ['top', 'bottom'];let i = index">
+        <div class="ui__header ui__element"></div>
+        <div class="ui__body">
+            <div class="ui__sidebar ui__element"></div>
+            <div class="ui__content">
+                <div class="ui__element"></div>
+                <div class="ui__element"></div>
+                <div class="ui__element"></div>
+                <div class="ui__element"></div>
+            </div>
+        </div>
+    </div>
+    <div class="diagram__flow">
+        <div class="diagram__actions mat-elevation-z1 fill--warn content--center">
+            <mat-icon>touch_app</mat-icon>
+            <span class="diagram__label diagram__label--bottom">Action Dispatcher</span>
+        </div>
+        <div class="diagram__store mat-elevation-z1 fill--accent content--center" style="flex-direction: column">
+            <mat-icon>store</mat-icon>
+            <span style="font-weight: 500;margin-top: 7px;">Store</span>
+        </div>
+        <div class="diagram__reducer mat-elevation-z1 fill--primary content--center">
+            <mat-icon>restore</mat-icon>
+            <span class="diagram__label diagram__label--bottom">Reducer Function</span>
+        </div>
+    </div>
+</div>
